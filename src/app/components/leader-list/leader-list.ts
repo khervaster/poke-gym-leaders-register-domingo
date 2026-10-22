@@ -16,7 +16,7 @@ export class LeaderList implements OnInit {
   selectedRegion = signal('All')
   
   ngOnInit() {
-    
+    this.leaderService.fetchLeader();
   }
 
 

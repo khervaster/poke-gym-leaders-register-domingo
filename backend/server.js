@@ -20,7 +20,7 @@ app.listen(3000, () => {
 
 const GymLeader = mongoose.Schema( {
 
-    id: { type: String },
+    id: { type: String, required: true },
     name: { type: String, required: true },
     region: { type: String, required: true, enum: ['Johto', 'Hoenn', 'Kanto'] },
     town: { type: String, required: true},
