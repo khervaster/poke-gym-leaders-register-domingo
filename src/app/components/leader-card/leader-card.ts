@@ -9,18 +9,8 @@ import { GymLeader } from '../../models/gym-leader';
 })
 export class LeaderCard {
 
-
   leader = input.required<GymLeader>();
   edit = output<string>();
   remove = output<string>();
-
-  onEdit(leader: any) {
-
-  }
-
-  onDelete(leader: any) {
-
-  }
-
 
 }

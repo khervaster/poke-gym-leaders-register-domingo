@@ -1,1 +1,17 @@
-<p>leader-card works!</p>
+<div class="card" [class]="leader().region.toLowerCase()">
+  <h3>{{ leader().name }}</h3>
+  <p><strong>Region:</strong> {{ leader().region }}</p>
+  <p><strong>Town:</strong> {{ leader().town }}</p>
+  <p><strong>Badge:</strong> {{ leader().badge }}</p>
+  <p><strong>Specialty:</strong> {{ leader().specialty }}</p>
+  <p><strong>Ace Level:</strong> {{ leader().aceLevel }}</p>
+  
+  @if (leader().motto) {
+    <p class="motto">"{{ leader().motto }}"</p>
+  }
+
+  <div class="actions">
+    <button (click)="edit.emit(leader()._id!)">Edit</button>
+    <button class="delete" (click)="remove.emit(leader()._id!)">Remove</button>
+  </div>
+</div>
