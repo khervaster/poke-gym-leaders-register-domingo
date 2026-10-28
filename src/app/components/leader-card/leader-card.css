@@ -1,5 +1,5 @@
     .card {
-    background: #2a2a40;
+    background: #27274d;
     color: #ffffff;
     border-radius: 8px;
     padding: 1.5rem;
@@ -10,9 +10,9 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .card.kanto { border-left-color: #da6771; }
-    .card.johto { border-left-color: #eccc68; }
-    .card.hoenn { border-left-color: #2ed573; }
+    .card.kanto { border-left-color: #db4b57; }
+    .card.johto { border-left-color: #be9f41; }
+    .card.hoenn { border-left-color: #6aeca0; }
 
     .card h3 {
     margin: 0 0 0.5rem 0;
