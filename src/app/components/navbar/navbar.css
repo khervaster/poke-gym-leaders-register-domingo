@@ -2,23 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ccc;
-  background-color: #f8f8f8;
+  background: #232247;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .navbar h1 {
-  font-size: 1.2rem;
   margin: 0;
+  font-size: 1.5rem;
 }
 
 .links a {
-  color: #0000ee;
-  text-decoration: underline;
-  margin-left: 15px;
+  color: #a0a0c0;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 4px;
 }
 
 .links a.active {
-  font-weight: bold;
-  color: #000000;
+  color: #ffffff;
+  border-bottom: 2px solid #6c5ce7;
 }

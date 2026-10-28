@@ -1,39 +1,74 @@
 .form-container {
-  border: 1px solid #ccc;
-  padding: 20px;
-  max-width: 400px;
-  margin: 20px 0;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #232247;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
 }
 
 label {
+  margin-bottom: 0.35rem;
   font-weight: bold;
-  margin-bottom: 4px;
 }
 
+
 input, select, textarea {
-  padding: 6px;
-  border: 1px solid #777;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #5a578c;
+  background: #d3d3d3;
+  color: #3a3838;
+  font-weight: bold;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6c5ce7;
 }
 
 .error {
-  color: red;
+  color: #ff4757;
   font-size: 0.8rem;
-  margin-top: 3px;
+  margin-top: 0.25rem;
 }
 
 .actions {
   display: flex;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.actions button {
-  padding: 6px 12px;
+button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
   cursor: pointer;
+  background: #6c5ce7;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+button:disabled {
+  background: #555555;
+  cursor: not-allowed;
+}
+
+button.cancel {
+  background: #555555;
 }

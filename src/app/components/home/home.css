@@ -1,29 +1,43 @@
 .home-card {
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin-top: 20px;
+  background: #232247;
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.home-card h2 {
+  margin-top: 0;
+  font-size: 2rem;
 }
 
 .stats-grid {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  justify-content: space-around;
+  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .stat-box {
-  border: 1px solid #ccc;
-  padding: 15px;
-  flex: 1;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 30%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .stat-box h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #a0a0c0;
 }
 
 .stat-box p {
-  font-size: 1.8rem;
-  margin: 10px 0 0 0;
+  font-size: 2.5rem;
   font-weight: bold;
+  margin: 0.5rem 0 0 0;
+  color: #6c5ce7;
 }
