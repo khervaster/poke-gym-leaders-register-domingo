@@ -15,7 +15,6 @@ export class LeaderForm implements OnInit {
   private service = inject(GymLeaderService);
   private router = inject(Router);
 
-  // Route Input Binding receives :id parameter automatically
   id = input<string>();
 
   form = this.fb.nonNullable.group({
@@ -23,7 +22,7 @@ export class LeaderForm implements OnInit {
     region: ['Kanto' as 'Kanto' | 'Johto' | 'Hoenn', Validators.required],
     town: ['', Validators.required],
     badge: ['', Validators.required],
-    specialty: ['', Validators.required],
+    specialty: ['Fire', Validators.required],
     aceLevel: [1, [Validators.required, Validators.min(1), Validators.max(100)]],
     motto: ['', Validators.maxLength(150)]
   });
@@ -35,6 +34,12 @@ export class LeaderForm implements OnInit {
         this.form.patchValue(data);
       });
     }
+  }
+
+  changeLevel(amount: number) {
+    const current = this.form.controls.aceLevel.value || 1;
+    const updated = Math.min(100, Math.max(1, current + amount));
+    this.form.controls.aceLevel.setValue(updated);
   }
 
   onSubmit() {

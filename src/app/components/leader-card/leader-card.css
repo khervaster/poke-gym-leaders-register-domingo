@@ -61,6 +61,12 @@
   margin-top: 0.15rem;
 }
 
+.field-item .value.ace-level {
+  font-size: 1rem;
+  color: #f1c40f;
+  font-weight: bold;
+}
+
 
 .motto {
   font-style: italic;
