@@ -1,0 +1,39 @@
+.form-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input, select, textarea {
+  padding: 6px;
+  border: 1px solid #777;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.actions button {
+  padding: 6px 12px;
+  cursor: pointer;
+}

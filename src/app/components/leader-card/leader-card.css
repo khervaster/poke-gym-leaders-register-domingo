@@ -1,47 +1,47 @@
-.card {
-  background: #2a2a40;
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  border-left: 6px solid #888;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+    .card {
+    background: #2a2a40;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border-left: 6px solid #888;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
 
-.card.kanto { border-left-color: #ff4757; }
-.card.johto { border-left-color: #eccc68; }
-.card.hoenn { border-left-color: #2ed573; }
+    .card.kanto { border-left-color: #da6771; }
+    .card.johto { border-left-color: #eccc68; }
+    .card.hoenn { border-left-color: #2ed573; }
 
-.card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.4rem;
-}
+    .card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    }
 
-.motto {
-  font-style: italic;
-  color: #aaaaaa;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
+    .motto {
+    font-style: italic;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    }
 
-.actions {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
+    .actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    }
 
-.actions button {
-  cursor: pointer;
-  padding: 8px 14px;
-  border-radius: 4px;
-  border: none;
-  font-weight: bold;
-  background: #6c5ce7;
-  color: #ffffff;
-}
+    .actions button {
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    background: #6c5ce7;
+    color: #ffffff;
+    }
 
-.actions button.delete {
-  background: #ff4757;
-}
+    .actions button.delete {
+    background: #ff4757;
+    }

@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+.navbar h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.links a {
+  color: #0000ee;
+  text-decoration: underline;
+  margin-left: 15px;
+}
+
+.links a.active {
+  font-weight: bold;
+  color: #000000;
+}
