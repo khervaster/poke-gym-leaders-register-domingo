@@ -1,1 +1,69 @@
-<p>leader-form works!</p>
+<div class="form-container">
+  <h2>{{ id() ? 'Edit Gym Leader' : 'Register a Gym Leader' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="field">
+      <label>Name</label>
+      <input formControlName="name" placeholder="e.g. Brock" />
+      @if (form.controls.name.touched && form.controls.name.invalid) {
+        <span class="error">Name is required (at least 2 characters).</span>
+      }
+    </div>
+
+    <div class="field">
+      <label>Region</label>
+      <select formControlName="region">
+        <option value="Kanto">Kanto</option>
+        <option value="Johto">Johto</option>
+        <option value="Hoenn">Hoenn</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Town</label>
+      <input formControlName="town" placeholder="e.g. Pewter City" />
+      @if (form.controls.town.touched && form.controls.town.invalid) {
+        <span class="error">Town is required.</span>
+      }
+    </div>
+
+    <div class="field">
+      <label>Badge</label>
+      <input formControlName="badge" placeholder="e.g. Boulder Badge" />
+      @if (form.controls.badge.touched && form.controls.badge.invalid) {
+        <span class="error">Badge is required.</span>
+      }
+    </div>
+
+    <div class="field">
+      <label>Specialty</label>
+      <input formControlName="specialty" placeholder="e.g. Rock" />
+      @if (form.controls.specialty.touched && form.controls.specialty.invalid) {
+        <span class="error">Specialty is required.</span>
+      }
+    </div>
+
+    <div class="field">
+      <label>Ace Level (1-100)</label>
+      <input type="number" formControlName="aceLevel" />
+      @if (form.controls.aceLevel.touched && form.controls.aceLevel.invalid) {
+        <span class="error">Ace level must be between 1 and 100.</span>
+      }
+    </div>
+
+    <div class="field">
+      <label>Motto (Optional, max 150 chars)</label>
+      <textarea formControlName="motto" rows="3"></textarea>
+      @if (form.controls.motto.touched && form.controls.motto.invalid) {
+        <span class="error">Motto must be 150 characters or less.</span>
+      }
+    </div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="form.invalid">
+        {{ id() ? 'Save Changes' : 'Add Leader' }}
+      </button>
+      <button type="button" class="cancel" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

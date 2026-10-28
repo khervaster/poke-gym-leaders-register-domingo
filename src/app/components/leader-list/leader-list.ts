@@ -1,23 +1,41 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GymLeaderService } from '../../services/gym-leader';
+import { LeaderCard } from '../leader-card/leader-card';
 
 @Component({
-  imports: [],
   selector: 'app-leader-list',
-  styleUrl: './leader-list.css',
+  standalone: true,
+  imports: [LeaderCard],
   templateUrl: './leader-list.html',
+  styleUrl: './leader-list.css'
 })
 export class LeaderList implements OnInit {
+  private service = inject(GymLeaderService);
+  private router = inject(Router);
 
-  router = inject(Router);
-  leaderService = inject(GymLeaderService);
+  selectedRegion = signal<'All' | 'Kanto' | 'Johto' | 'Hoenn'>('All');
 
-  selectedRegion = signal('All')
-  
+  filteredLeaders = computed(() => {
+    const region = this.selectedRegion();
+    const all = this.service.leaders();
+    return region === 'All' ? all : all.filter(l => l.region === region);
+  });
+
   ngOnInit() {
-    this.leaderService.fetchLeader();
+    this.service.fetchLeaders().subscribe();
   }
 
+  onEdit(id: string) {
+    this.router.navigate(['/leaders', id, 'edit']);
+  }
 
+  onDelete(id: string) {
+    const leader = this.service.leaders().find(l => l._id === id);
+    if (confirm(`Remove ${leader?.name || 'this leader'} from the registry?`)) {
+      this.service.deleteLeader(id).subscribe(() => {
+        this.service.fetchLeaders().subscribe();
+      });
+    }
+  }
 }

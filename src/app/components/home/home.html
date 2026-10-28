@@ -1,1 +1,19 @@
-<p>home works!</p>
+<section class="home-card">
+  <h2>Welcome to the Pokémon League Gym Leader Registry</h2>
+  <p>Official records for Kanto, Johto, and Hoenn Gym Leaders.</p>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <h3>Kanto Leaders</h3>
+      <p>{{ service.kantoCount() }}</p>
+    </div>
+    <div class="stat-box">
+      <h3>Johto Leaders</h3>
+      <p>{{ service.johtoCount() }}</p>
+    </div>
+    <div class="stat-box">
+      <h3>Hoenn Leaders</h3>
+      <p>{{ service.hoennCount() }}</p>
+    </div>
+  </div>
+</section>

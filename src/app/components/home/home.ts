@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { GymLeaderService } from '../../services/gym-leader';
 
 @Component({
-  imports: [],
   selector: 'app-home',
-  styleUrl: './home.css',
   templateUrl: './home.html',
+  styleUrl: './home.css'
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  service = inject(GymLeaderService);
+
+  ngOnInit() {
+    this.service.fetchLeaders().subscribe();
+  }
+}

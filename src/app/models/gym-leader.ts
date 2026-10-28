@@ -1,7 +1,7 @@
 export interface GymLeader {
-    id: number;
+    _id?: string;
     name: string;
-    region: string;
+    region: 'Kanto' | 'Johto' | 'Hoenn';
     town: string;
     badge: string;
     specialty: string;
