@@ -1,11 +1,35 @@
 <div class="card" [class]="leader().region.toLowerCase()">
-  <h3>{{ leader().name }}</h3>
-  <p><strong>Region:</strong> {{ leader().region }}</p>
-  <p><strong>Town:</strong> {{ leader().town }}</p>
-  <p><strong>Badge:</strong> {{ leader().badge }}</p>
-  <p><strong>Specialty:</strong> {{ leader().specialty }}</p>
-  <p><strong>Ace Level:</strong> {{ leader().aceLevel }}</p>
-  
+  <h3 class="card-title">{{ leader().name }}</h3>
+
+  <div class="card-row">
+    <div class="field-item">
+      <span class="label">Region</span>
+      <span class="value">{{ leader().region }}</span>
+    </div>
+    <div class="field-item">
+      <span class="label">Town</span>
+      <span class="value">{{ leader().town }}</span>
+    </div>
+  </div>
+
+  <div class="card-row">
+    <div class="field-item">
+      <span class="label">Specialty</span>
+      <span class="value">{{ leader().specialty }}</span>
+    </div>
+    <div class="field-item">
+      <span class="label">Badge</span>
+      <span class="value">{{ leader().badge }}</span>
+    </div>
+  </div>
+
+  <div class="card-row single">
+    <div class="field-item">
+      <span class="label">Ace Level</span>
+      <span class="value">{{ leader().aceLevel }}</span>
+    </div>
+  </div>
+
   @if (leader().motto) {
     <p class="motto">"{{ leader().motto }}"</p>
   }

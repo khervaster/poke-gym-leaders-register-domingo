@@ -1,47 +1,100 @@
-    .card {
-    background: #27274d;
-    color: #ffffff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    border-left: 6px solid #888;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+:host {
+  flex: 0 1 280px; 
+  box-sizing: border-box;
+}
 
-    .card.kanto { border-left-color: #db4b57; }
-    .card.johto { border-left-color: #be9f41; }
-    .card.hoenn { border-left-color: #6aeca0; }
+.card {
+  background: #27274d;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-left: 6px solid #888;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  box-sizing: border-box;
+}
 
-    .card h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.4rem;
-    }
+.card.kanto { border-left-color: #db4b57; }
+.card.johto { border-left-color: #be9f41; }
+.card.hoenn { border-left-color: #6aeca0; }
 
-    .motto {
-    font-style: italic;
-    color: #aaaaaa;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    }
 
-    .actions {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    }
+.card-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-    .actions button {
-    cursor: pointer;
-    padding: 8px 14px;
-    border-radius: 4px;
-    border: none;
-    font-weight: bold;
-    background: #6c5ce7;
-    color: #ffffff;
-    }
 
-    .actions button.delete {
-    background: #ff4757;
-    }
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-row.single {
+  justify-content: center;
+}
+
+
+.field-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.field-item .label {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #a0a0c0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.field-item .value {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 0.15rem;
+}
+
+
+.motto {
+  font-style: italic;
+  color: #ebebf5;
+  font-size: 0.9rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.actions button {
+  flex: 1;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  background: #6c5ce7;
+  color: #ffffff;
+}
+
+.actions button.delete {
+  background: #ff4757;
+}
